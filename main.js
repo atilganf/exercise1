@@ -3,8 +3,8 @@ function showSlide(n){
   var i;
   var slides = document.getElementsByClassName('ss');
   var dots = document.getElementsByClassName("dot");
-  if(n >= slides.length){n = 0};
-  if(n < 0){n = slides.length - 1; }
+  if(n >= slides.length){n = 0;}
+  if(n < 0){n = slides.length - 1;}
   for(i = 0; i < slides.length; i++){
     slides[i].style.display = "none";
     dots[i].className = dots[i].className.replace(" active", "");
@@ -17,3 +17,4 @@ function plusSlide(n){
   currentSlide +=n;
   showSlide(currentSlide);
 }
+showSlide(0);

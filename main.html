@@ -10,33 +10,35 @@
    <!--Font Avesome-->
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
    <link rel="stylesheet" href="main.css">
-   <script src="main.js"></script>
+
   </head>
   <body>
     <div class="grid-cont">
       <div class="grid ex1">
-        <div class="ss" id="ss1">
-          <span class="number">1 / 4</span>
-          <img src="img/view1.jpg">
-          <span class="caption">Caption Text</span>
+        <div class="img-cont">
+          <div class="ss" id="ss1">
+            <span class="number">1 / 4</span>
+            <img src="img/view1.jpg">
+            <span class="caption">Caption Text</span>
+          </div>
+          <div class="ss" id="ss2">
+            <span class="number">2 / 4</span>
+            <img src="img/view2.jpg">
+            <span class="caption">Caption Two</span>
+          </div>
+          <div class="ss" id="ss3">
+            <span class="number">3 / 4</span>
+            <img src="img/view3.jpg">
+            <span class="caption">Caption Three</span>
+          </div>
+          <div class="ss" id="ss4">
+            <span class="number">4 / 4</span>
+            <img src="img/view4.jpg">
+            <span class="caption">Caption Four</span>
+          </div>
+          <div onclick="plusSlide(1)" class="next">&#10095;</div>
+          <div onclick="plusSlide(-1)" class="prev">&#10094;</div>
         </div>
-        <div class="ss" id="ss2">
-          <span class="number"></span>
-          <img src="img/view2.jpg">
-          <span class="caption">Caption Text</span>
-        </div>
-        <div class="ss" id="ss3">
-          <span class="number"></span>
-          <img src="img/view3.jpg">
-          <span class="caption">Caption Text</span>
-        </div>
-        <div class="ss" id="ss4">
-          <span class="number"></span>
-          <img src="img/view4.jpg">
-          <span class="caption">Caption Text</span>
-        </div>
-        <div onclick="plusSlide(1)" class="next">&#10095;</div>
-        <div onclick="plusSlide(-1)" class="prev">&#10094;</div>
         <div class="dots">
           <div onclick="showSlide(0)" class="dot active"></div>
           <div onclick="showSlide(1)" class="dot"></div>
@@ -69,5 +71,6 @@
 
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
