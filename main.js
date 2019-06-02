@@ -1,3 +1,4 @@
+//Exercise 1
 var currentSlide = 0;
 function showSlide(n){
   var i;
@@ -18,3 +19,11 @@ function plusSlide(n){
   showSlide(currentSlide);
 }
 showSlide(0);
+
+//Exercise 2
+var modal = document.getElementById('mod01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

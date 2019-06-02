@@ -1,3 +1,20 @@
+@mixin animatezoom($time){
+  -webkit-animation: animatezoom $time;
+  animation: animatezoom $time;
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+@mixin center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 @mixin reset{
   padding: 0;
   margin: 0;
@@ -22,11 +39,13 @@ html,body{
       padding: 10px;
       background-color: lightgrey;
       border-radius: 0 0 8px 0;
+      z-index: -1;
       b{
         color: blue;
       }
     }
   }
+  //Exercise 1
   .ex1{
     .img-cont{
     max-width: 800px;
@@ -97,6 +116,108 @@ html,body{
       .active{background-color: #444;}
     }
   }
+
+  //Exercise 2
   .ex2{
+    height: 80px;
+    width: 100%;
+    button{
+      background-color: #4CAF50;
+      padding: 14px 20px;
+      border: none;
+      margin: 8px 0;
+      cursor: pointer;
+      width: 100%;
+      color: white;
+    }
+    .loginBtn{
+      width: 100px;
+      @include center;
+    }
+    .animate{
+      @include animatezoom(0.6s);
+    }
+    .modal{
+      display: none;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0 ,0.5);
+      position: fixed;
+      top: 0;
+      z-index: 10;
+      .form-cont{
+        max-width: 600px;
+        width: 80%;
+        border: 1px solid blue;
+        margin-top: 20px;
+        @include center;
+        background-color: white;
+        position: relative;
+        .close{
+          position: absolute;
+          font-size: 35px;
+          font-weight: bold;
+          color :black;
+          right: 0;
+          cursor: pointer;
+          padding: 5px 18px;
+          &:hover{
+            color: #f44336;
+          }
+        }
+        .img-cont{
+          width: 100%;
+          text-align: center;
+          margin: 30px 0;
+          .avatar{
+            width: 40%;
+            border-radius: 50%;
+          }
+        }
+        .input-cont{
+          padding: 0 15px;
+          label{
+            font-weight: bold;
+            padding: 10px 0;
+            font-size: 18px;
+          }
+          input{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            transition: 0.5s;
+            &:focus{
+              border: 1px solid blue;
+            }
+          }
+          .rmmbr{
+            input{
+              width: auto;
+            }
+            label{
+              font-weight: normal;
+              font-size: 15px;
+            }
+          }
+        }
+        .form-footer{
+          padding: 15px;
+          position: relative;
+          background-color: #eee;
+          button{
+            width: 100px;
+            margin: 0;
+            background-color: #f44336;
+          }
+          span{
+            position: relative;
+            float: right;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,19 @@
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -23,6 +39,7 @@ html, body {
   padding: 10px;
   background-color: lightgrey;
   border-radius: 0 0 8px 0;
+  z-index: -1;
 }
 .grid-cont .grid .info b {
   color: blue;
@@ -103,6 +120,111 @@ html, body {
 }
 .grid-cont .ex1 .dots .active {
   background-color: #444;
+}
+.grid-cont .ex2 {
+  height: 80px;
+  width: 100%;
+}
+.grid-cont .ex2 button {
+  background-color: #4CAF50;
+  padding: 14px 20px;
+  border: none;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 100%;
+  color: white;
+}
+.grid-cont .ex2 .loginBtn {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid-cont .ex2 .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+.grid-cont .ex2 .modal {
+  display: none;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.grid-cont .ex2 .modal .form-cont {
+  max-width: 600px;
+  width: 80%;
+  border: 1px solid blue;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  position: relative;
+}
+.grid-cont .ex2 .modal .form-cont .close {
+  position: absolute;
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
+  right: 0;
+  cursor: pointer;
+  padding: 5px 18px;
+}
+.grid-cont .ex2 .modal .form-cont .close:hover {
+  color: #f44336;
+}
+.grid-cont .ex2 .modal .form-cont .img-cont {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+.grid-cont .ex2 .modal .form-cont .img-cont .avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+.grid-cont .ex2 .modal .form-cont .input-cont {
+  padding: 0 15px;
+}
+.grid-cont .ex2 .modal .form-cont .input-cont label {
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 18px;
+}
+.grid-cont .ex2 .modal .form-cont .input-cont input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  transition: 0.5s;
+}
+.grid-cont .ex2 .modal .form-cont .input-cont input:focus {
+  border: 1px solid blue;
+}
+.grid-cont .ex2 .modal .form-cont .input-cont .rmmbr input {
+  width: auto;
+}
+.grid-cont .ex2 .modal .form-cont .input-cont .rmmbr label {
+  font-weight: normal;
+  font-size: 15px;
+}
+.grid-cont .ex2 .modal .form-cont .form-footer {
+  padding: 15px;
+  position: relative;
+  background-color: #eee;
+}
+.grid-cont .ex2 .modal .form-cont .form-footer button {
+  width: 100px;
+  margin: 0;
+  background-color: #f44336;
+}
+.grid-cont .ex2 .modal .form-cont .form-footer span {
+  position: relative;
+  float: right;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
