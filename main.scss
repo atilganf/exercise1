@@ -15,9 +15,19 @@ html,body{
   font-family: "Open Sans", sans-serif;
   .grid{
     width: 100%;
+    border-bottom: 1px solid grey;
+    position: relative;
+    .info{
+      position: absolute;
+      padding: 10px;
+      background-color: lightgrey;
+      border-radius: 0 0 8px 0;
+      b{
+        color: blue;
+      }
+    }
   }
   .ex1{
-    border-bottom: 1px solid grey;
     .img-cont{
     max-width: 800px;
     margin: auto;

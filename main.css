@@ -15,9 +15,17 @@ html, body {
 }
 .grid-cont .grid {
   width: 100%;
-}
-.grid-cont .ex1 {
   border-bottom: 1px solid grey;
+  position: relative;
+}
+.grid-cont .grid .info {
+  position: absolute;
+  padding: 10px;
+  background-color: lightgrey;
+  border-radius: 0 0 8px 0;
+}
+.grid-cont .grid .info b {
+  color: blue;
 }
 .grid-cont .ex1 .img-cont {
   max-width: 800px;
