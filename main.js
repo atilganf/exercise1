@@ -27,3 +27,31 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+//Exercise 3
+var acc = document.getElementsByClassName("accordion");
+var i;
+for(i = 0; i < acc.length; i++){
+  acc[i].addEventListener("click", function(){
+    var panels = document.getElementsByClassName("panel");
+    var panel = this.nextElementSibling;
+    var mh = panel.style.maxHeight;
+    for(x = 0; x < panels.length; x++){
+      acc[x].className = acc[x].className.replace("active", "");
+      panels[x].style.maxHeight = "0px";
+    }
+    this.classList.toggle("active");
+    if(this.lastChild.innerHTML == "+"){
+      this.lastChild.innerHTML = "-";
+    }else{
+      this.lastChild.innerHTML = "+";
+    }
+    if(mh){
+      panel.style.maxHeight = mh;
+    }
+    if(panel.style.maxHeight != "0px"){
+      panel.style.maxHeight = "0px";
+    }else{
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
