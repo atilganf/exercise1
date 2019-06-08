@@ -1,12 +1,11 @@
-//Exercise 1
+//Exercise 1: Slideshow
 var currentSlide = 0;
 function showSlide(n){
-  var i;
   var slides = document.getElementsByClassName('ss');
   var dots = document.getElementsByClassName("dot");
   if(n >= slides.length){n = 0;}
   if(n < 0){n = slides.length - 1;}
-  for(i = 0; i < slides.length; i++){
+  for(let i = 0; i < slides.length; i++){
     slides[i].style.display = "none";
     dots[i].className = dots[i].className.replace(" active", "");
   }
@@ -20,17 +19,16 @@ function plusSlide(n){
 }
 showSlide(0);
 
-//Exercise 2
+//Exercise 2: Login Form
 var modal = document.getElementById('mod01');
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-//Exercise 3
+//Exercise 3: Accordion
 var acc = document.getElementsByClassName("accordion");
-var i;
-for(i = 0; i < acc.length; i++){
+for(let i = 0; i < acc.length; i++){
   acc[i].addEventListener("click", function(){
     var panels = document.getElementsByClassName("panel");
     var panel = this.nextElementSibling;
@@ -57,4 +55,52 @@ for(i = 0; i < acc.length; i++){
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
+}
+
+//Exercise 4: Side Nav Animation
+var navNum = 0;
+function openNav(i) {
+  var sn = document.getElementById("sidenav");
+  if(navNum == 0){
+    if(i==1){
+      sn.style.width = "250px";
+      sn.childNodes[3].style.textAlign = "left";
+      sn.style.right = "auto";
+      sn.style.left = "0px";
+      sn.childNodes[1].style.right = "35px";
+      sn.childNodes[1].style.left = "auto";
+    }
+    if(i==2){
+      sn.style.width = "250px";
+      document.getElementsByClassName("grid-cont")[0].style.marginLeft = "250px";
+      sn.childNodes[3].style.textAlign = "left";
+      sn.style.right = "auto";
+      sn.style.left = "0px";
+      sn.childNodes[1].style.right = "35px";
+      sn.childNodes[1].style.left = "auto";
+    }
+    if(i==3){
+      sn.style.width = "100%";
+      sn.childNodes[3].style.textAlign = "center";
+      sn.style.right = "auto";
+      sn.style.left = "0px";
+      sn.childNodes[1].style.right = "35px";
+      sn.childNodes[1].style.left = "auto";
+    }
+    if(i==4){
+      sn.style.width = "250px";
+      sn.style.right = "0px";
+      sn.style.left = "auto";
+      sn.childNodes[3].style.textAlign = "right";
+      sn.childNodes[1].style.right = "auto";
+      sn.childNodes[1].style.left = "35px";
+    }
+    navNum = i;
+  }
+}
+function closeNav(){
+  navNum = 0;
+  var sn = document.getElementById("sidenav");
+  sn.style.width = "0px";
+  document.getElementsByClassName("grid-cont")[0].style.marginLeft = "0px";
 }

@@ -96,7 +96,7 @@
       <!--Exercise 3: Accordion-->
       <div class="grid ex3">
         <div class="info">
-          <b>Exercise 1</b>
+          <b>Exercise 3</b>
           </br>
           <span>Complete Time: <b>2 hours</b></span>
         </div>
@@ -119,15 +119,16 @@
       <!--Exercise 4: Side Navigation-->
       <div class="grid ex4">
         <div class="info">
-          <b>Exercise 1</b>
+          <b>Exercise 4: Sidenav animation</b>
           </br>
           <span>Complete Time: <b>2 hours</b></span>
         </div>
-        <button class="overlay">Sidenav overlay</button>
-        <button class="push">Sidenav push</button>
-        <button class="full">Full width sidenav</button>
-        <button class="right">Right sidenav</button>
-        <div class="sidenav">
+        <button class="overlay" onclick="openNav(1)">Sidenav overlay</button>
+        <button class="push" onclick="openNav(2)">Sidenav push</button>
+        <button class="full" onclick="openNav(3)">Full width sidenav</button>
+        <button class="right" onclick="openNav(4)">Right sidenav</button>
+        <div class="sidenav" id="sidenav">
+          <button button="close" onclick="closeNav()">&times;</button>
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
