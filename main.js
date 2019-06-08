@@ -35,10 +35,13 @@ for(i = 0; i < acc.length; i++){
     var panels = document.getElementsByClassName("panel");
     var panel = this.nextElementSibling;
     var mh = panel.style.maxHeight;
+    var sign = this.lastChild.innerHTML;
     for(x = 0; x < panels.length; x++){
       acc[x].className = acc[x].className.replace("active", "");
       panels[x].style.maxHeight = "0px";
+      acc[x].lastChild.innerHTML = "+";
     }
+    this.lastChild.innerHTML = sign;
     this.classList.toggle("active");
     if(this.lastChild.innerHTML == "+"){
       this.lastChild.innerHTML = "-";

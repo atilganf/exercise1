@@ -260,5 +260,20 @@ html, body {
 .grid-cont .ex3 .container .active {
   background-color: #ccc;
 }
+.grid-cont .ex4 button {
+  margin: 8px 15px;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  background-color: #3498DB;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+}
 
 /*# sourceMappingURL=main.css.map */

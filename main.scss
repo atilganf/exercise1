@@ -45,7 +45,8 @@ html,body{
       }
     }
   }
-  //Exercise 1
+
+  //Exercise 1: Slideshow
   .ex1{
     .img-cont{
     max-width: 800px;
@@ -117,7 +118,7 @@ html,body{
     }
   }
 
-  //Exercise 2
+  //Exercise 2: Login Form
   .ex2{
     height: 80px;
     width: 100%;
@@ -221,7 +222,7 @@ html,body{
     }
   }
 
-  //Exercise 3
+  //Exercise 3: Accordion
   .ex3{
     .container{
       padding: 15px 250px;
@@ -253,6 +254,23 @@ html,body{
       .active{
         background-color: #ccc;
       }
+    }
+  }
+
+  //Exercise 4: Sidenav Overlay
+  .ex4{
+    button{
+      margin: 8px 15px;
+      padding: 15px 20px;
+      border: none;
+      outline: none;
+      @include center;
+      width: 200px;
+      background-color: #3498DB;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      display: block;
     }
   }
 }
